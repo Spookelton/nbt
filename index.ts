@@ -24,7 +24,7 @@ let fn = {
 			})
 			return {
 				// Set inrix's position to 100 50 100
-				console: `${sS.c['white'].c}Set ${sS.c['brightBlue'].c}${vars.username}${sS.c['white'].c}'s postion to ${sS.c['orange'].c}${vars.x} ${sS.c['red'].c}${vars.y} ${sS.c['brightBlue'].c}${vars.z} ${sS.c['reset'].c}`,
+				console: `whiteSet ${sS.c['brightBlue'].c}${vars.username}white's postion to ${sS.c['orange'].c}${vars.x} {red${vars.y} ${sS.c['brightBlue'].c}${vars.z} reset`,
 				minecraft: `tellraw ${message.logTo.user} ${JSON.stringify(
 					[{
 						"text": `Set `,
@@ -60,7 +60,7 @@ let fn = {
 		fn.getSpawn = async message => {
 			let worldSpawn = await getSpawn();
 			return {
-				console: `${sS.c[sS.modules['nbt'].color].c}World spawn is ${sS.c['reset'].c}${worldSpawn.x} ${worldSpawn.y} ${worldSpawn.z}`,
+				console: `${sS.c[sS.modules['nbt'].color].c}World spawn is reset${worldSpawn.x} ${worldSpawn.y} ${worldSpawn.z}`,
 				minecraft: `tellraw ${message.logTo.user} ${JSON.stringify(
 					[{
 						"text": `World spawn is `,
@@ -87,13 +87,13 @@ let fn = {
 				exeFunc: 'tpo',
 				module: thisModule,
 				description: {
-					console: `${sS.c['brightWhite'].c}Set the coordinates of a given player in their playerdata to the coordinates specified. ${sS.c['reset'].c}\nExample: ${sS.c['yellow'].c}~tpo ${sS.c['brightBlue'].c}Username ${sS.c['orange'].c}0 ${sS.c['white'].c}100 ${sS.c['brightBlue'].c}0${sS.c['reset'].c}`,
+					console: `whiteBrightSet the coordinates of a given player in their playerdata to the coordinates specified. reset\nExample: yellow~tpo ${sS.c['brightBlue'].c}Username ${sS.c['orange'].c}0 white100 ${sS.c['brightBlue'].c}0reset`,
 					minecraft: [{
 						"text": `Teleports player to given chunk coords.\n`,
-						"color": sS.c['brightWhite'].m
+						"color": "white"
 					}, {
 						"text": 'Example: ',
-						"color": sS.c['white'].m
+						"color": "gray"
 					}, {
 						"text": '~tpo ',
 						"color": sS.c['brightYellow'].m
@@ -105,19 +105,19 @@ let fn = {
 						"color": sS.c['orange'].m
 					}, {
 						"text": '100 ',
-						"color": sS.c['white'].m
+						"color": "gray"
 					}, {
 						"text": '0 ',
 						"color": sS.c['brightBlue'].m
 					}, {
 						"text": "sets user coords to ",
-						"color": sS.c['white'].m
+						"color": "gray"
 					}, {
 						"text": '160 ',
 						"color": sS.c['orange'].m
 					}, {
 						"text": '100 ',
-						"color": sS.c['white'].m
+						"color": "gray"
 					}, {
 						"text": '160',
 						"color": sS.c['brightBlue'].m
@@ -127,7 +127,7 @@ let fn = {
 						embed: {
 							title: "Set a offline player's coords",
 							description: "~tpo",
-							color: parseInt(sS.c['orange'].h, 16),
+							color: parseInt("e77c02", 16), // Orange
 							timestamp: new Date(),
 							fields: [{
 								name: "Description",
@@ -144,23 +144,23 @@ let fn = {
 				exeFunc: 'getSpawn',
 				module: thisModule,
 				description: {
-					console: `${sS.c['white'].c}Gets server spawn coords. ${sS.c['reset'].c}Example: ${sS.c['yellow'].c}~getSpawn${sS.c['reset'].c}`,
+					console: `whiteGets server spawn coords. resetExample: yellow~getSpawnreset`,
 					minecraft: [{
 						"text": `Gets server spawn coords. `,
-						"color": sS.c['brightWhite'].m
+						"color": "white"
 					}, {
 						"text": `Example: `,
-						"color": sS.c['white'].m
+						"color": "gray"
 					}, {
 						"text": `~getSpawn`,
-						"color": sS.c['yellow'].m
+						"color": "gold"
 					}],
 					discord: {
 						string: null,
 						embed: {
 							title: "Get Spawn Coords",
 							description: "~getSpawn",
-							color: parseInt(sS.c['orange'].h, 16),
+							color: parseInt("e77c02", 16), // Orange
 							timestamp: new Date(),
 							fields: [{
 								name: "Description",
